@@ -20,29 +20,29 @@ enum ColorCode : unsigned int
 	COLOR_YELLOW = 0xFFFFFF00,
 	COLOR_WHITE = 0xFFFFFFFF,
 };
-int DrawDashedLine(int x1, int y1, int x2, int y2, unsigned int color, int length, int thickness = 1);
-int DrawDashedLineAA(float x1, float y1, float x2, float y2, unsigned int color, float length, float thickness = 1.0f);
-int LoadGraphWithErrorHandling(const char* filename);
+extern int DrawDashedLine(int x1, int y1, int x2, int y2, unsigned int color, int length, int thickness = 1);
+extern int DrawDashedLineAA(float x1, float y1, float x2, float y2, unsigned int color, float length, float thickness = 1.0f);
+extern int LoadGraphWithErrorHandling(const char* filename);
 
 #include <minwindef.h>
-void UpdateJoypadInputState(void);
-BOOL IsButtonDown(int button);
-BOOL IsButtonUp(int button);
-BOOL IsButtonPressed(int button);
-BOOL IsButtonReleased(int button); 
+extern void UpdateJoypadInputState(void);
+extern BOOL IsButtonDown(int button);
+extern BOOL IsButtonUp(int button);
+extern BOOL IsButtonPressed(int button);
+extern BOOL IsButtonReleased(int button);
 
-float ToRadians(float degree);
-float ToDegrees(float radian);
-int   ClampI(int   x, int   min, int   max);
-float ClampF(float x, float min, float max);
+extern float ToRadians(float degree);
+extern float ToDegrees(float radian);
+extern int   ClampI(int   x, int   min, int   max);
+extern float ClampF(float x, float min, float max);
 
 #define EXIT_KEY (KEY_INPUT_ESCAPE)    // ã≠êßèIóπÉLÅ[
-void UpdateSystem(void);
-void ExitGame(void);
+extern void UpdateSystem(void);
+extern void ExitGame(void);
 
-void  UpdateFrameTimer(void);
-float GetFrameDeltaTime(void);
-float GetFrameRate(void);
+extern void  UpdateFrameTimer(void);
+extern float GetFrameDeltaTime(void);
+extern float GetFrameRate(void);
 
 typedef int HGRP;
 typedef int HSND;
