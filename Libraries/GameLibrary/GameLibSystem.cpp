@@ -24,7 +24,7 @@
 //!
 //! @return ‚È‚µ
 //----------------------------------------------------------------------
-void UpdateSystem(void)
+extern void UpdateSystem(void)
 {
 	UpdateFrameTimer();
 	UpdateJoypadInputState();
@@ -39,7 +39,7 @@ void UpdateSystem(void)
 //!
 //! @return ‚È‚µ
 //----------------------------------------------------------------------
-void ExitGame(void)
+extern void ExitGame(void)
 {
 	PostQuitMessage(0);
 }

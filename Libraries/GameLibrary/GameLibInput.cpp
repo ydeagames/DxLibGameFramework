@@ -30,7 +30,7 @@ static int s_lastInputState;
 //!
 //! @return なし
 //------------------------------------------------------------------
-void UpdateJoypadInputState(void)
+extern void UpdateJoypadInputState(void)
 {
 	// 状態の履歴を保存
 	s_lastInputState = s_currentInputState;
@@ -50,7 +50,7 @@ void UpdateJoypadInputState(void)
 //! @retval TRUE  指定されたボタンが押されている場合
 //! @retval FALSE それ以外の場合
 //------------------------------------------------------------------
-BOOL IsButtonDown(int button)
+extern BOOL IsButtonDown(int button)
 {
 	if ((s_currentInputState & button) == button)
 	{
@@ -72,7 +72,7 @@ BOOL IsButtonDown(int button)
 //! @retval TRUE  指定されたボタンが押されていない場合
 //! @retval FALSE それ以外の場合
 //------------------------------------------------------------------
-BOOL IsButtonUp(int button)
+extern BOOL IsButtonUp(int button)
 {
 	if ((s_currentInputState & button) != button)
 	{
@@ -94,7 +94,7 @@ BOOL IsButtonUp(int button)
 //! @retval TRUE  指定されたキーが押された場合
 //! @retval FALSE それ以外の場合
 //------------------------------------------------------------------
-BOOL IsButtonPressed(int button)
+extern BOOL IsButtonPressed(int button)
 {
 	if (((~s_lastInputState & s_currentInputState) & button) == button)
 	{
@@ -116,7 +116,7 @@ BOOL IsButtonPressed(int button)
 //! @retval TRUE  指定されたキーが離された場合
 //! @retval FALSE それ以外の場合
 //------------------------------------------------------------------
-BOOL IsButtonReleased(int button)
+extern BOOL IsButtonReleased(int button)
 {
 	if (((s_lastInputState & ~s_currentInputState) & button) == button)
 	{

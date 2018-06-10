@@ -24,7 +24,7 @@
 //!
 //! @return Šp“x[ƒ‰ƒWƒAƒ“]
 //----------------------------------------------------------------------
-float ToRadians(float degree)
+extern float ToRadians(float degree)
 {
 	return degree * DX_PI_F / 180.0f;
 }
@@ -38,7 +38,7 @@ float ToRadians(float degree)
 //!
 //! @return Šp“x[“x]
 //----------------------------------------------------------------------
-float ToDegrees(float radian)
+extern float ToDegrees(float radian)
 {
 	return radian * 180.0f / DX_PI_F;
 }
@@ -54,7 +54,7 @@ float ToDegrees(float radian)
 //!
 //! @return ‰ºŒÀ`ãŒÀ‚Ì”ÍˆÍ“à‚Éû‚ß‚½’l
 //----------------------------------------------------------------------
-int ClampI(int x, int min, int max)
+extern int ClampI(int x, int min, int max)
 {
 	if (x < min)
 	{
@@ -79,7 +79,7 @@ int ClampI(int x, int min, int max)
 //!
 //! @return ‰ºŒÀ`ãŒÀ‚Ì”ÍˆÍ“à‚Éû‚ß‚½’l
 //----------------------------------------------------------------------
-float ClampF(float x, float min, float max)
+extern float ClampF(float x, float min, float max)
 {
 	if (x < min)
 	{

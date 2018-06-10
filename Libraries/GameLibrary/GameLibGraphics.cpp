@@ -33,7 +33,7 @@
 //! @retval  0 成功
 //! @retval -1 エラー発生
 //----------------------------------------------------------------------
-int DrawDashedLine(int x1, int y1, int x2, int y2, unsigned int color, int length, int thickness)
+extern int DrawDashedLine(int x1, int y1, int x2, int y2, unsigned int color, int length, int thickness)
 {
 	int vx = x2 - x1;
 	int vy = y2 - y1;
@@ -84,7 +84,7 @@ int DrawDashedLine(int x1, int y1, int x2, int y2, unsigned int color, int lengt
 //! @retval  0 成功
 //! @retval -1 エラー発生
 //----------------------------------------------------------------------
-int DrawDashedLineAA(float x1, float y1, float x2, float y2, unsigned int color, float length, float thickness)
+extern int DrawDashedLineAA(float x1, float y1, float x2, float y2, unsigned int color, float length, float thickness)
 {
 	float vx = x2 - x1;
 	float vy = y2 - y1;
@@ -129,7 +129,7 @@ int DrawDashedLineAA(float x1, float y1, float x2, float y2, unsigned int color,
 //! @retval -1以外 グラフィックのハンドル
 //! @retval -1     エラー発生
 //----------------------------------------------------------------------
-int LoadGraphWithErrorHandling(const char* filename)
+extern int LoadGraphWithErrorHandling(const char* filename)
 {
 	HGRP imageHandle = LoadGraph(filename);
 

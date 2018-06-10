@@ -37,7 +37,7 @@ static float s_frameRate      = 0.0f;    // フレームレート[fps]
 //!
 //! @return なし
 //----------------------------------------------------------------------
-void UpdateFrameTimer(void)
+extern void UpdateFrameTimer(void)
 {
 	static LONGLONG previousTime = 0;                             // 前回の計測時間
 	static LONGLONG currentTime  = GetNowHiPerformanceCount();    // 現在の計測時間
@@ -73,7 +73,7 @@ void UpdateFrameTimer(void)
 //!
 //! @return フレームの経過時間[s]
 //------------------------------------------------------------------
-float GetFrameDeltaTime(void)
+extern float GetFrameDeltaTime(void)
 {
 	return s_frameDeltaTime;
 }
@@ -87,7 +87,7 @@ float GetFrameDeltaTime(void)
 //!
 //! @return フレームレート[fps]
 //------------------------------------------------------------------
-float GetFrameRate(void)
+extern float GetFrameRate(void)
 {
 	return s_frameRate;
 }
