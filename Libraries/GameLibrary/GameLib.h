@@ -1,6 +1,12 @@
 #pragma once
 #include <DxLib.h>
 
+#if defined(_DEBUG)
+#pragma comment(lib, "GameFramework_d.lib")
+#else
+#pragma comment(lib, "GameFramework.lib")
+#endif
+
 enum ColorCode : unsigned int
 {
 	COLOR_BLACK = 0xFF000000,
